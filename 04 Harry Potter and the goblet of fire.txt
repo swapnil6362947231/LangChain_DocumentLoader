@@ -1,0 +1,17 @@
+04 Harry Potter and the Goblet of Fire
+
+This is a sample text file for practicing LangChain's TextLoader.
+It is not the original Harry Potter novel.
+
+Use this file to test loading text documents:
+
+from langchain_community.document_loaders import TextLoader
+
+loader = TextLoader(
+    "04 Harry Potter and the goblet of fire.txt",
+    encoding="utf-8"
+)
+documents = loader.load()
+
+print(documents[0].page_content)
+print(documents[0].metadata)
